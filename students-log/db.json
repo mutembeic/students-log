@@ -1,0 +1,11 @@
+{
+  "students": [
+    {
+      "id": "4567",
+      "name": "mary",
+      "course": "SOFTWARE",
+      "phoneNumber": "78",
+      "yearAdmitted": "2005"
+    }
+  ]
+}

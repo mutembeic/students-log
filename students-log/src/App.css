@@ -1,38 +1,140 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Use a modern font */
+  background-color: #f4f7f6; /* Light background color */
+  color: #333; /* Dark text color */
+}
+
 .App {
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2d42; /* Darker background for navbar */
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-title {
+  color: #ffffff; /* White text for title */
+  font-size: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-links a {
+  color: #ffffff; /* White text for links */
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d90429; /* Bright accent color on hover */
+}
+
+/* Home Component Styles */
+.home {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea; /* Light border for table */
+}
+
+th {
+  background-color: #edf2f4; /* Light background for headers */
+  color: #2b2d42; /* Dark text color */
+}
+
+/* New Student Form Styles */
+.new-student-form, .edit-student-form {
+  background-color: #ffffff; /* White background for forms */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form div {
+  margin-bottom: 15px; /* Spacing between form fields */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label {
+  margin-bottom: 5px;
+  font-weight: bold; /* Bold labels */
 }
+
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc; /* Light border for inputs */
+  border-radius: 4px;
+  font-size: 16px; /* Larger font for inputs */
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+  border-color: #d90429; /* Accent border color on focus */
+}
+
+/* Button Styles */
+.button {
+  padding: 10px 15px;  /* Padding for buttons */
+  border: none;  /* Remove default border */
+  border-radius: 4px;  /* Rounded corners */
+  background-color: #4caf50;  /* Green background for view button */
+  color: #ffffff;  /* White text */
+  font-size: 16px;  /* Font size */
+  cursor: pointer;  /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;  /* Smooth background transition */
+  margin-right: 10px; /* Spacing between buttons */
+}
+
+.button:hover {
+  background-color: #45a049;  /* Darker green on hover */
+}
+
+.edit-button {
+  background-color: #2196F3;  /* Blue background for edit button */
+}
+
+.edit-button:hover {
+  background-color: #1976D2;  /* Darker blue on hover */
+}
+
+
+/* View Student Styles */
+.view-student {
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.view-student p {
+  margin: 10px 0; /* Spacing between details */
+}
+
