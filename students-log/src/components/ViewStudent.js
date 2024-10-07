@@ -1,4 +1,3 @@
-// components/ViewStudent.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
@@ -26,7 +25,7 @@ const ViewStudent = () => {
       <p><strong>Course:</strong> {student.course}</p>
       <p><strong>Phone Number:</strong> {student.phoneNumber}</p>
       <p><strong>Year Admitted:</strong> {student.yearAdmitted}</p>
-      <Link to="/">Back to Students List</Link>
+      <Link to="/">Back</Link>
     </div>
   );
 };

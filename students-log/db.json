@@ -1,11 +1,11 @@
 {
   "students": [
     {
-      "id": "4567",
-      "name": "mary",
-      "course": "SOFTWARE",
-      "phoneNumber": "78",
-      "yearAdmitted": "2005"
+      "id": "213",
+      "name": "ww",
+      "course": "415",
+      "phoneNumber": "12",
+      "yearAdmitted": "2004"
     }
   ]
 }

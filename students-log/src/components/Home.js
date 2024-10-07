@@ -1,34 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [students, setStudents] = useState([]);
 
-  // Fetch students from the JSON Server
   useEffect(() => {
     axios.get('http://localhost:5000/students')
       .then(response => setStudents(response.data))
       .catch(error => console.error('Error fetching students:', error));
   }, []);
 
-  // Delete student
   const deleteStudent = (id) => {
     axios.delete(`http://localhost:5000/students/${id}`)
       .then(() => {
         setStudents(students.filter(student => student.id !== id));
       })
       .catch(error => console.error('Error deleting student:', error));
-  };
-
-  // Placeholder functions for viewing and editing student
-  const viewStudent = (id) => {
-    // Logic to view student details
-    alert(`View student with ID: ${id}`);
-  };
-
-  const editStudent = (id) => {
-    // Logic to edit student details
-    alert(`Edit student with ID: ${id}`);
   };
 
   return (
@@ -54,8 +42,8 @@ const Home = () => {
               <td>{student.phoneNumber}</td>
               <td>{student.yearAdmitted}</td>
               <td>
-                <button className="button" onClick={() => viewStudent(student.id)}>View</button>
-                <button className="button edit-button" onClick={() => editStudent(student.id)}>Edit</button>
+                <Link to={`/view-student/${student.id}`} className='view-button'>View</Link>
+                <Link to={`/edit-student/${student.id}`} className='button edit-button'>Edit</Link>
                 <button onClick={() => deleteStudent(student.id)}>Delete</button>
               </td>
             </tr>
@@ -67,4 +55,3 @@ const Home = () => {
 };
 
 export default Home;
-

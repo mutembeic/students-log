@@ -1,10 +1,9 @@
-// Update App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import NewStudent from './components/NewStudent';
-import EditStudent from './components/EditStudent'; // Import the new component
-import ViewStudent from './components/ViewStudent'; // Import the new component
+import EditStudent from './components/EditStudent';  
+import ViewStudent from './components/ViewStudent';  
 import './App.css';
 
 const App = () => {
@@ -24,8 +23,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new-student" element={<NewStudent />} />
-          <Route path="/edit-student/:id" element={<EditStudent />} /> {/* Route for editing */}
-          <Route path="/view-student/:id" element={<ViewStudent />} /> {/* Route for viewing */}
+          <Route path="/edit-student/:id" element={<EditStudent />} />  
+          <Route path="/view-student/:id" element={<ViewStudent />} /> 
         </Routes>
       </div>
     </Router>
@@ -34,3 +33,4 @@ const App = () => {
 
 export default App;
 
+ 
